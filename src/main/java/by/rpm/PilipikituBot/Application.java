@@ -1,6 +1,5 @@
 package by.rpm.PilipikituBot;
 
-import by.rpm.external.api.Telegram;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
 
@@ -11,6 +10,8 @@ import java.util.Properties;
 public class Application {
     public static final String AUTHORIZATION_TOKEN;
     public static final String CHAT_ID;
+
+    public static Brain brain = new Brain();
 
     static {
         Properties properties = new Properties();
@@ -45,9 +46,10 @@ public class Application {
             context.addRoutes(new MainRouteBuilder());
             context.start();
 //            Thread.sleep(100);
-            Telegram.SendText(context, "Hello World! \n/Pilipikitu in action.");
-            Brain brain = new Brain();
+//            Brain brain = new Brain();
             brain.InitButtonsForAction(context);
+
+//            brain.InitButtonsForAction(context);
         } catch (Exception e) {
             e.printStackTrace();
         }

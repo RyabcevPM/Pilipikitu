@@ -11,9 +11,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Telegram {
+
+    public static final String INIT_MESSAGE_BUTTON_CHANGE = "\uD83D\uDC47";
+
 
     public static void SendText(CamelContext context, String text){
         ProducerTemplate template = context.createProducerTemplate();
@@ -70,14 +72,14 @@ public class Telegram {
     }
 
 
-    public static OutgoingMessage getButtons(ArrayList<String> buttons, String caption) {
+    public static OutgoingMessage getButtons(ArrayList<String> buttons, String testMessage) {
         OutgoingTextMessage msg = new OutgoingTextMessage();
 
         int columnCnt = (int) Math.round(Math.sqrt (buttons.size()));
         System.out.println(columnCnt);
         if (columnCnt * columnCnt<buttons.size()) columnCnt+=1;
         System.out.println(columnCnt);
-        if (!caption.isEmpty()) msg.setText(caption);
+        msg.setText(testMessage + INIT_MESSAGE_BUTTON_CHANGE);
 
         ReplyKeyboardMarkup.Builder.KeyboardBuilder keyboardBuilder = ReplyKeyboardMarkup.builder().keyboard();
         int cnt = 0;
