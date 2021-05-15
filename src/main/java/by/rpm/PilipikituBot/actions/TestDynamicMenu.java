@@ -11,7 +11,7 @@ public class TestDynamicMenu extends ActionChain {
         super(name, String.valueOf(cnt));
         this.cnt = cnt;
         for (int i = -cnt + 1; i < cnt; i++) {
-            buttons.add(new ActionChain(i == 0 ? FINAL_BUTTON : String.valueOf(i)));
+            getButtons().add(new ActionChain(i == 0 ? FINAL_BUTTON : String.valueOf(i)));
         }
     }
 

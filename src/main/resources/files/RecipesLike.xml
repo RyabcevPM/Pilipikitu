@@ -1,0 +1,48 @@
+<recipes class="like">
+    <segment>
+        <name>Первое блюдо</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Второе блюдо</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Закуски</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Изделия из теста</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Маринады</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Напитки</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+    <segment>
+        <name>Соусы</name>
+        <list>
+            <a href="https://www.russianfood.com/recipes/recipe.php?rid=140728">Жюльен</a>
+        </list>
+    </segment>
+</recipes>
+
+
+
+

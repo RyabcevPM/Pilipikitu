@@ -15,6 +15,12 @@ import java.util.ArrayList;
 public class Telegram {
 
     public static final String INIT_MESSAGE_BUTTON_CHANGE = "\uD83D\uDC47";
+    public static enum TextType{
+        NORMAL,
+        HTML,
+        Markdown,
+        BigText
+    }
 
 
     public static void SendText(CamelContext context, String text){
@@ -36,8 +42,25 @@ public class Telegram {
     };
 
     public static OutgoingMessage getText(String text){
+        return getText(text, TextType.NORMAL);
+    }
+
+    public static OutgoingMessage getText(String text, TextType textType){
         OutgoingTextMessage msg = new OutgoingTextMessage();
-        msg.setText(text);
+        if (textType.equals(TextType.NORMAL))  msg.setText(text);
+        if (textType.equals(TextType.Markdown)) { msg.setText(text);
+            msg.setText(text);
+            msg.setParseMode(TextType.Markdown.name());
+        }
+        if (textType.equals(TextType.BigText)) { msg.setText(text);
+            msg.setText("```\n" + text.replaceAll("\\n", "\n") + "\n```");
+            msg.setParseMode(TextType.Markdown.name());
+        }
+        if (textType.equals(TextType.HTML)) {
+            msg.setText(text);
+            msg.setParseMode(TextType.HTML.name());
+        }
+
         return msg;
     };
 
@@ -75,10 +98,8 @@ public class Telegram {
     public static OutgoingMessage getButtons(ArrayList<String> buttons, String testMessage) {
         OutgoingTextMessage msg = new OutgoingTextMessage();
 
-        int columnCnt = (int) Math.round(Math.sqrt (buttons.size()));
-        System.out.println(columnCnt);
+        int columnCnt = Math.min(4, (int) Math.round(Math.sqrt (buttons.size())));
         if (columnCnt * columnCnt<buttons.size()) columnCnt+=1;
-        System.out.println(columnCnt);
         msg.setText(testMessage + INIT_MESSAGE_BUTTON_CHANGE);
 
         ReplyKeyboardMarkup.Builder.KeyboardBuilder keyboardBuilder = ReplyKeyboardMarkup.builder().keyboard();

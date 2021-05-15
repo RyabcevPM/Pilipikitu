@@ -11,6 +11,10 @@ public class FinalMessage extends ActionChain implements IsFinalAction {
         this.msg = msg;
     }
 
+    public FinalMessage(String name, String outputText) {
+        this(name, Telegram.getText(outputText));
+    }
+
     public FinalMessage(String outputText) {
         this(outputText, Telegram.getText(outputText));
     }
