@@ -22,7 +22,6 @@ public class FinalMessage extends ActionChain implements IsFinalAction {
 
     @Override
     public OutgoingMessage getResult() {
-//        isFinal = true;
         return msg;
     }
 }

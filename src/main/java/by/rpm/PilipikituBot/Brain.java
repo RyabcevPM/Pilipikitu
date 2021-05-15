@@ -37,15 +37,15 @@ public class Brain {
 
     private static ActionChain getMainMenu() {
         ArrayList<ActionChain> menu = new ArrayList<>();
-        menu.add(new SelectOneLine("Похвали меня", new File("D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\prise.txt")));
-        menu.add(new SelectOneLine("Поругай меня", new File("D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\scold.txt")));
-        menu.add(new SelectOneLine("Тост", new File("D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\drinkFun.txt"), Telegram.TextType.BigText));
+        menu.add(new SelectOneLine("Похвали меня", new File("src/main/resources/files/prise.txt")));
+        menu.add(new SelectOneLine("Поругай меня", new File("src/main/resources/files/scold.txt")));
+        menu.add(new SelectOneLine("Тост", new File("src/main/resources/files/drinkFun.txt"), Telegram.TextType.BigText));
         menu.add(new FoodMaster());
         {   // submenu1
             ArrayList<ActionChain> subMenuButtons = new ArrayList<>();
             subMenuButtons.add(new FinalMessage("location", Telegram.getLocation(53.947, 27.70743, null, null)));
-            subMenuButtons.add(new FinalMessage("photo", Telegram.getPhoto("d:\\pas\\logo.jpg", "")));
-            subMenuButtons.add(new FinalMessage("audio", Telegram.getAudio("C:\\Users\\rpm\\Downloads\\griby_ringon_min.mp3", "")));
+            subMenuButtons.add(new FinalMessage("photo", Telegram.getPhoto("src/main/resources/image/logo.jpg", "")));
+            subMenuButtons.add(new FinalMessage("audio", Telegram.getAudio("src/main/resources/mp3/griby_ringon_min.mp3", "")));
             String html =
                     "<b>bold</b>, <strong>bold</strong>\n" +
                             "<i>italic</i>, <em>italic</em>\n" +
@@ -64,7 +64,7 @@ public class Brain {
                 ArrayList<ActionChain> subMenuButtons2 = new ArrayList<>();
                 subMenuButtons2.add(new TestDynamicMenu("Button test", 3));
                 subMenuButtons2.add(new FinalMessage("location2", Telegram.getLocation(60, 28, null, null)));
-                subMenuButtons2.add(new FinalMessage("show dev picture", Telegram.getPhoto("d:\\pas\\logo.jpg", "")));
+                subMenuButtons2.add(new FinalMessage("show dev picture", Telegram.getPhoto("src/main/resources/image/logo.jpg", "")));
                 ActionChain subMenu2 = new ActionChain("Еще одна вложенность!", subMenuButtons2);
                 subMenuButtons.add(subMenu2);
             }

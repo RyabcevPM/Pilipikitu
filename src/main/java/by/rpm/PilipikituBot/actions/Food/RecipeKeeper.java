@@ -20,15 +20,16 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class RecipeKeeper extends ActionChain {
-    private static String SAVE = "Сохарнить";
+    private static String SAVE = "Сохранить";
     private static String CANCEL = "Отмена";
     private static String CONFIRM_MESSAGE = "Отправте мне знавание и затем нажмите \"" + SAVE + "\"";
     private static String APPLY_NO_MESSAGE = "Хорошо, не буду. И вообще забыл.";
     private String url;
     private String segment;
     private static ArrayList<ActionChain> likeMenu;
-    public static String LIKE_RECIPES = "D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\2.txt";
-    public static String NEW_RECIPES = "D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\RecipesNew.xml";
+    public static String LIKE_RECIPES = "src/main/resources/files/RecipesLike.xml";
+    public static String NEW_RECIPES = "src/main/resources/files/RecipesNew.xml";
+
 
 
     public RecipeKeeper(String name, String url, String segment, ArrayList<ActionChain> likeMenu) {

@@ -8,31 +8,18 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class ActionChain implements Comparable<ActionChain> {
-    protected String message;
-
-    public ArrayList<ActionChain> getButtons() {
-        return buttons;
-    }
-
-    private ArrayList<ActionChain> buttons;
-    protected String name;
     protected static FinalMessage BACK_TO_MAIN_MENU = new FinalMessage("В главное меню");
     protected static OutgoingMessage NOT_IMPLEMENTATION = Telegram.getText("Действие пока не реализовано");
+    protected String message;
+    protected String name;
     protected String inputText = "";
-
-    public void setInputText(String inputText) {
-        this.inputText = inputText;
-    }
-
-    public void setButtons(ArrayList<ActionChain> buttons) {
-        this.buttons = buttons;
-    }
-
+    private ArrayList<ActionChain> buttons;
     public ActionChain(String name, ArrayList<ActionChain> buttons, String message) {
         this.name = name;
         this.buttons = buttons;
         this.message = message;
     }
+
     public ActionChain(String name, String message) {
         this(name, new ArrayList<>(), message);
     }
@@ -45,9 +32,20 @@ public class ActionChain implements Comparable<ActionChain> {
         this(name, new ArrayList<>(), "");
     }
 
-
     public ActionChain() {
         this("", new ArrayList<>(), "");
+    }
+
+    public ArrayList<ActionChain> getButtons() {
+        return buttons;
+    }
+
+    public void setButtons(ArrayList<ActionChain> buttons) {
+        this.buttons = buttons;
+    }
+
+    public void setInputText(String inputText) {
+        this.inputText = inputText;
     }
 
     @Override
@@ -56,7 +54,7 @@ public class ActionChain implements Comparable<ActionChain> {
     }
 
     public OutgoingMessage showCaseButtons() {
-        return Telegram.getButtons(getButtonNames(),message);
+        return Telegram.getButtons(getButtonNames(), message);
     }
 
 
@@ -67,7 +65,6 @@ public class ActionChain implements Comparable<ActionChain> {
 
 
     public Optional<ActionChain> getNext(String buttonName) {
-//        Optional<ActionChain> newAction = buttons.stream().filter(o -> o.getName().equals(buttonName)).findFirst();
         return FindButton(buttonName);
     }
 

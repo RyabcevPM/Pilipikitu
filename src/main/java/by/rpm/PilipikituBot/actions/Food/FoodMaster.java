@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class FoodMaster extends ActionChain {
-
-//    static String LIKE_RECIPES = "D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\RecipesLike.xml";
-
     private static String INIT_MESSAGE = "Как будем выбирать?";
     private static String FIRST_LEVEL_LIKE = "Любимые";
     private static String FIRST_LEVEL_BREAKFAST = "Придумать завтрак";
@@ -25,12 +22,10 @@ public class FoodMaster extends ActionChain {
     private static String NO = "НЕТ";
     private static String APPLY_NO_MESSAGE = "Хорошо, не буду. И вообще забыл.";
     private static ArrayList<ActionChain> likeMenu;
-//    private ArrayList<String> steps;
 
 
     public FoodMaster() {
         super("Еда", INIT_MESSAGE);
-//        steps = new ArrayList<>();
         ArrayList<ActionChain> menu2 = new ArrayList<>();
 
         menu2.add(new FinalMessage(SELECTION_RANDOM, NOT_IMPLEMENTATION));
@@ -59,22 +54,14 @@ public class FoodMaster extends ActionChain {
         ActionChain result = new ActionChain(FoodMaster.class.getName(), "Добавить в любиме блюда?");
         result.getButtons().add(new FinalMessage(NO, APPLY_NO_MESSAGE));
         for (ActionChain segment : likeMenu) {
-            result.getButtons().add(new RecipeKeeper(segment.getName(), url, segment.getName(),likeMenu));
+            result.getButtons().add(new RecipeKeeper(segment.getName(), url, segment.getName(), likeMenu));
         }
         return result;
     }
 
 
-
     @Override
     public Optional<ActionChain> getNext(String buttonName) {
-//        steps.add(buttonName);
-//        System.out.println(steps);
-//        if (buttonName.equals(SELECTION_SMART)
-//                || buttonName.equals(SELECTION_HEAVY)
-//                || buttonName.equals(SELECTION_EASY)
-//                || buttonName.equals(SELECTION_USEFUL)) steps.clear();
-
         Optional<ActionChain> next = super.getNext(buttonName);
         if (buttonName.equals(FIRST_LEVEL_LIKE)) {
             likeMenu = RecipeKeeper.loadMenu(RecipeKeeper.LIKE_RECIPES);
