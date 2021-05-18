@@ -1,0 +1,92 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Pilipikitu:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pilipikitu_jar</output-path>
+    <root id="archive" name="Pilipikitu.jar">
+      <element id="module-output" name="Pilipikitu" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-xml-jaxb/3.10.0-SNAPSHOT/camel-xml-jaxb-3.10.0-20210507.024447-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-http-base/3.10.0-SNAPSHOT/camel-http-base-3.10.0-20210507.025434-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.53.Final/netty-codec-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/asynchttpclient/async-http-client/2.12.2/async-http-client-2.12.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-language/3.10.0-SNAPSHOT/camel-language-3.10.0-20210507.024000-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-cloud/3.10.0-SNAPSHOT/camel-cloud-3.10.0-20210507.024944-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-management-api/3.10.0-SNAPSHOT/camel-management-api-3.10.0-20210507.023137-177.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-file/3.10.0-SNAPSHOT/camel-file-3.10.0-20210507.023922-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core-engine/3.10.0-SNAPSHOT/camel-core-engine-3.10.0-20210507.023526-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-rest/3.10.0-SNAPSHOT/camel-rest-3.10.0-20210507.024057-174.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-servlet/3.10.0-SNAPSHOT/camel-servlet-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-xpath/3.10.0-SNAPSHOT/camel-xpath-3.10.0-20210507.024409-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.53.Final/netty-resolver-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-health/3.10.0-SNAPSHOT/camel-health-3.10.0-20210507.023940-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-dataformat/3.10.0-SNAPSHOT/camel-dataformat-3.10.0-20210507.023741-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-browse/3.10.0-SNAPSHOT/camel-browse-3.10.0-20210507.023645-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-tooling-model/3.10.0-SNAPSHOT/camel-tooling-model-3.10.0-20210507.022928-177.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-bean/3.10.0-SNAPSHOT/camel-bean-3.10.0-20210507.023626-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-util-json/3.10.0-SNAPSHOT/camel-util-json-3.10.0-20210507.022910-177.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-webhook/3.10.0-SNAPSHOT/camel-webhook-3.10.0-20210507.051307-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-base/3.10.0-SNAPSHOT/camel-base-3.10.0-20210507.023241-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-vm/3.10.0-SNAPSHOT/camel-vm-3.10.0-20210507.024210-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-util/3.10.0-SNAPSHOT/camel-util-3.10.0-20210507.023033-177.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-controlbus/3.10.0-SNAPSHOT/camel-controlbus-3.10.0-20210507.023724-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-api/3.10.0-SNAPSHOT/camel-api-3.10.0-20210507.023110-176.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-attachments/3.10.0-SNAPSHOT/camel-attachments-3.10.0-20210507.025453-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-http/3.10.0-SNAPSHOT/camel-http-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.53.Final/netty-handler-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-dataset/3.10.0-SNAPSHOT/camel-dataset-3.10.0-20210507.023822-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.12.3/jackson-datatype-jsr310-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-mock/3.10.0-SNAPSHOT/camel-mock-3.10.0-20210507.023803-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-stream/3.10.0-SNAPSHOT/camel-stream-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-validator/3.10.0-SNAPSHOT/camel-validator-3.10.0-20210507.024349-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-socks/4.1.53.Final/netty-codec-socks-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-unix-common/4.1.53.Final/netty-transport-native-unix-common-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.53.Final/netty-codec-http-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-http-common/3.10.0-SNAPSHOT/camel-http-common-3.10.0-20210507.025516-174.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.53.Final/netty-buffer-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-direct/3.10.0-SNAPSHOT/camel-direct-3.10.0-20210507.023840-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.53.Final/netty-transport-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core-processor/3.10.0-SNAPSHOT/camel-core-processor-3.10.0-20210507.023347-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core-model/3.10.0-SNAPSHOT/camel-core-model-3.10.0-20210507.023431-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.12.3/jackson-databind-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-stub/3.10.0-SNAPSHOT/camel-stub-3.10.0-20210507.024229-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.12.3/jackson-annotations-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-saga/3.10.0-SNAPSHOT/camel-saga-3.10.0-20210507.024116-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-kqueue/4.1.53.Final/netty-transport-native-kqueue-4.1.53.Final-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-seda/3.10.0-SNAPSHOT/camel-seda-3.10.0-20210507.024153-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-ref/3.10.0-SNAPSHOT/camel-ref-3.10.0-20210507.024037-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-timer/3.10.0-SNAPSHOT/camel-timer-3.10.0-20210507.024246-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.53.Final/netty-common-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/asynchttpclient/async-http-client-netty-utils/2.12.2/async-http-client-netty-utils-2.12.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.12.3/jackson-core-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-xml-jaxp/3.10.0-SNAPSHOT/camel-xml-jaxp-3.10.0-20210507.024328-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-base-engine/3.10.0-SNAPSHOT/camel-base-engine-3.10.0-20210507.023314-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core/3.10.0-SNAPSHOT/camel-core-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-support/3.10.0-SNAPSHOT/camel-support-3.10.0-20210507.023215-176.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-directvm/3.10.0-SNAPSHOT/camel-directvm-3.10.0-20210507.023900-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-telegram/3.10.0-SNAPSHOT/camel-telegram-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core-languages/3.10.0-SNAPSHOT/camel-core-languages-3.10.0-20210507.023552-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-log/3.10.0-SNAPSHOT/camel-log-3.10.0-20210507.024019-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-scheduler/3.10.0-SNAPSHOT/camel-scheduler-3.10.0-20210507.024134-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-core-reifier/3.10.0-SNAPSHOT/camel-core-reifier-3.10.0-20210507.023500-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-management/3.10.0-SNAPSHOT/camel-management-3.10.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-xslt/3.10.0-SNAPSHOT/camel-xslt-3.10.0-20210507.024428-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler-proxy/4.1.53.Final/netty-handler-proxy-4.1.53.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-cluster/3.10.0-SNAPSHOT/camel-cluster-3.10.0-20210507.023702-175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/camel/camel-xml-io-util/3.10.0-SNAPSHOT/camel-xml-io-util-3.10.0-20210507.024304-177.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.53.Final/netty-transport-native-epoll-4.1.53.Final-linux-x86_64.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

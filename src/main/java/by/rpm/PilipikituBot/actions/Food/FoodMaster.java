@@ -1,5 +1,6 @@
 package by.rpm.PilipikituBot.actions.Food;
 
+import by.rpm.PilipikituBot.Application;
 import by.rpm.PilipikituBot.actions.ActionChain;
 import by.rpm.PilipikituBot.actions.FinalMessage;
 
@@ -40,9 +41,9 @@ public class FoodMaster extends ActionChain {
         getButtons().add(new ActionChain(FIRST_LEVEL_DINNER, menu2));
         getButtons().add(new ActionChain(FIRST_LEVEL_SUPPER, menu2));
         getButtons().add(new ActionChain(FIRST_LEVEL_SNACK, menu2));
-        getButtons().add(new ActionChain(FIRST_LEVEL_BIG_MENU, RecipeKeeper.loadMenu(RecipeKeeper.NEW_RECIPES)));
+        getButtons().add(new ActionChain(FIRST_LEVEL_BIG_MENU, RecipeKeeper.loadMenu(Application.RECIPES_NEW_FILE)));
         getButtons().add(BACK_TO_MAIN_MENU);
-        likeMenu = RecipeKeeper.loadMenu(RecipeKeeper.LIKE_RECIPES);
+        likeMenu = RecipeKeeper.loadMenu(Application.RECIPES_LIKE_FILE);
         getButtons().add(new ActionChain(FIRST_LEVEL_LIKE, likeMenu));
     }
 
@@ -64,7 +65,7 @@ public class FoodMaster extends ActionChain {
     public Optional<ActionChain> getNext(String buttonName) {
         Optional<ActionChain> next = super.getNext(buttonName);
         if (buttonName.equals(FIRST_LEVEL_LIKE)) {
-            likeMenu = RecipeKeeper.loadMenu(RecipeKeeper.LIKE_RECIPES);
+            likeMenu = RecipeKeeper.loadMenu(Application.RECIPES_LIKE_FILE);
             next.get().setButtons(likeMenu);
         }
 

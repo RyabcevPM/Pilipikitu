@@ -14,7 +14,6 @@ import org.apache.camel.component.telegram.model.OutgoingMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -24,7 +23,7 @@ public class Brain {
     public static final OutgoingMessage HELLO_MESSAGE = Telegram.getText("Hello World! \nPilipikitu in action.\n");
     private static ActionChain mainMenu = getMainMenu();
     private Logger log = LoggerFactory.getLogger(getClass());
-    private ActionChain currentAction;
+    private ActionChain currentAction = mainMenu;
 //    private static String lastInputText = "";
 
 //    public static String getLastInputText() {
@@ -37,15 +36,24 @@ public class Brain {
 
     private static ActionChain getMainMenu() {
         ArrayList<ActionChain> menu = new ArrayList<>();
-        menu.add(new SelectOneLine("Похвали меня", new File("src/main/resources/files/prise.txt")));
-        menu.add(new SelectOneLine("Поругай меня", new File("src/main/resources/files/scold.txt")));
-        menu.add(new SelectOneLine("Тост", new File("src/main/resources/files/drinkFun.txt"), Telegram.TextType.BigText));
+
+//        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//        System.out.println("----------------------------------------->");
+//        System.out.println(classLoader);
+
+//        System.out.println(classLoader.getResource("resources/files/prise.txt"));
+        menu.add(new SelectOneLine("Похвали меня", Application.PRISE_LIST_FILE));
+        menu.add(new SelectOneLine("Поругай меня", Application.SCOLD_LIST_FILE));
+        menu.add(new SelectOneLine("Тост", Application.DRINK_FUN_FILE, Telegram.TextType.BigText));
+//        menu.add(new SelectOneLine("Похвали меня", new File("src/main/resources/files/prise.txt")));
+//        menu.add(new SelectOneLine("Поругай меня", new File("src/main/resources/files/scold.txt")));
+//        menu.add(new SelectOneLine("Тост", new File("src/main/resources/files/drinkFun.txt"), Telegram.TextType.BigText));
         menu.add(new FoodMaster());
         {   // submenu1
             ArrayList<ActionChain> subMenuButtons = new ArrayList<>();
             subMenuButtons.add(new FinalMessage("location", Telegram.getLocation(53.947, 27.70743, null, null)));
-            subMenuButtons.add(new FinalMessage("photo", Telegram.getPhoto("src/main/resources/image/logo.jpg", "")));
-            subMenuButtons.add(new FinalMessage("audio", Telegram.getAudio("src/main/resources/mp3/griby_ringon_min.mp3", "")));
+            subMenuButtons.add(new FinalMessage("photo", Telegram.getPhoto(Application.TEST_PHOTO_FILE_NAME, "")));
+            subMenuButtons.add(new FinalMessage("audio", Telegram.getAudio(Application.TEST_MP3_FILE_NAME, "")));
             String html =
                     "<b>bold</b>, <strong>bold</strong>\n" +
                             "<i>italic</i>, <em>italic</em>\n" +
@@ -64,7 +72,7 @@ public class Brain {
                 ArrayList<ActionChain> subMenuButtons2 = new ArrayList<>();
                 subMenuButtons2.add(new TestDynamicMenu("Button test", 3));
                 subMenuButtons2.add(new FinalMessage("location2", Telegram.getLocation(60, 28, null, null)));
-                subMenuButtons2.add(new FinalMessage("show dev picture", Telegram.getPhoto("src/main/resources/image/logo.jpg", "")));
+                subMenuButtons2.add(new FinalMessage("show dev picture", Telegram.getPhoto(Application.TEST_PHOTO_FILE_NAME, "")));
                 ActionChain subMenu2 = new ActionChain("Еще одна вложенность!", subMenuButtons2);
                 subMenuButtons.add(subMenu2);
             }

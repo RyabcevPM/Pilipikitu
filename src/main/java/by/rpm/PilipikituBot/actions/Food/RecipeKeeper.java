@@ -1,5 +1,6 @@
 package by.rpm.PilipikituBot.actions.Food;
 
+import by.rpm.PilipikituBot.Application;
 import by.rpm.PilipikituBot.actions.ActionChain;
 import by.rpm.PilipikituBot.actions.FinalMessage;
 import org.w3c.dom.Document;
@@ -14,6 +15,7 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 import javax.xml.xpath.*;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,8 +29,9 @@ public class RecipeKeeper extends ActionChain {
     private String url;
     private String segment;
     private static ArrayList<ActionChain> likeMenu;
-    public static String LIKE_RECIPES = "src/main/resources/files/RecipesLike.xml";
-    public static String NEW_RECIPES = "src/main/resources/files/RecipesNew.xml";
+    private static ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//    public static String LIKE_RECIPES = classLoader.getResource("src/main/resources/files/RecipesLike.xml").getFile();
+//    public static String NEW_RECIPES = classLoader.getResource("src/main/resources/files/RecipesNew.xml").getFile() ;
 
 
 
@@ -64,7 +67,7 @@ public class RecipeKeeper extends ActionChain {
         try {
             XMLOutputFactory output = XMLOutputFactory.newInstance();
 //            XMLStreamWriter writer = output.createXMLStreamWriter(new FileWriter(FoodMaster.LIKE_RECIPES));
-            XMLStreamWriter writer = output.createXMLStreamWriter(new FileWriter("D:\\Java\\mvn_project\\Pilipikitu\\src\\main\\resources\\files\\2.txt"));
+            XMLStreamWriter writer = output.createXMLStreamWriter(new FileWriter(Application.RECIPES_LIKE_FILE));
 
             writer.writeStartDocument("1.0");
             writer.writeStartElement("recipes");
@@ -100,6 +103,9 @@ public class RecipeKeeper extends ActionChain {
         }
     }
 
+    static ArrayList<ActionChain> loadMenu(File file) {
+        return loadMenu(file.getAbsolutePath());
+    }
 
     static ArrayList<ActionChain> loadMenu(String fileName) {
         ArrayList<ActionChain> menu = new ArrayList<>();
